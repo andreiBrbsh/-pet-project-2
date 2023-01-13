@@ -6,7 +6,7 @@
       font-family: Montserrat;
       src: url(/fonts/Montserrat-VariableFont_wght.ttf);
 }
-*,
+
 *::before,
 *::after {
       content: '';
@@ -15,19 +15,23 @@
       border: 0;
       box-sizing: border-box;
 }
+
 a {
       text-decoration: none;
       font-family: inherit;
+      padding: 0;
 }
+
 button, a {
       cursor: pointer;
 }
+
 ol, ul, li {
       list-style: none;
-}
+} 
 img {
       vertical-align: top;
-}
+} 
 h1, h2, h3, h4, h5, h6 {
       font-size: inherit;
       font-weight: inherit;
@@ -44,12 +48,10 @@ body {
 input:active, :hover, :focus {
       outline: 0;
       outline-offset: 0;
-} 
-
+}  
 [class*="__container"] {
         margin: 0 15px;
         background: #fff;
-
 }
 .total {
       max-width: 1440px;
@@ -67,10 +69,10 @@ input:active, :hover, :focus {
 .background__wrapper img {
       width: 100%;
       position: absolute;
-      object-fit: cover;
+      object-fit: contain;
+      object-position: center;
       top: 0;
       left: 0;
-
 }
 .wrapper {
         max-width: 830px;
@@ -95,7 +97,7 @@ input:active, :hover, :focus {
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      padding: 0;
+      padding: 55px 15px 0 15px;
       margin: 0;
 }
 .header__logo {
@@ -103,8 +105,22 @@ input:active, :hover, :focus {
       margin-bottom: 40px;
       padding: 0 15px;
       width: 100%;
+      height: 40px;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      align-items: center;
+}
+.header__logo-image a {
+      display: block;
+      height: 40px;
+      width: 176px;
+      position: relative;
+}
+.header__logo-image img {
+      height: 40px;
+      position: absolute;
+      top: 0;
+      left: 0;
 }
 .space {
       flex: 1 1 auto;
@@ -119,7 +135,12 @@ input:active, :hover, :focus {
 .header__logo-burger span {
       display: block;
       width: 40px;
-      height: 2px;
+      height: 3px;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
       background: #fff;
       position: absolute;
       top: 20px;
@@ -127,7 +148,7 @@ input:active, :hover, :focus {
       transition: .2s;
 }
 .header__logo-burger span:nth-child(1) {
-      top: 0;
+      top: 0px;
 }
 .header__logo-burger span:nth-child(3) {
       top: 40px;
@@ -136,15 +157,19 @@ input:active, :hover, :focus {
       .space {
             display: block;
       }
+      .header__logo {
+            padding: 0px 15px;
+            margin: 20px;
+      }
       .header__logo-burger {
             display: block;
       }
       .menu__list {
             flex-direction: column;
             backdrop-filter: blur(22px);
+            -webkit-backdrop-filter: blur(22px);
             width: 300px;
             border-radius: 0px 20px 20px 20px;
-            padding: 15px;
             position: absolute;
             top: 100px;
             left: 55px;
@@ -189,23 +214,41 @@ input:active, :hover, :focus {
       .header__container.active .header__logo-burger span:nth-child(1) {
             transform: translateY(18px) rotate(-45deg) scale(0.6);
             height: 6px;
-            background: rgb(58, 81, 121);
+            border-radius: 3px;
+            background: #fff;
             z-index: 1;
-      }
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            -o-border-radius: 3px;
+}
       .header__container.active .header__logo-burger span:nth-child(3) {
             transform: translateY(-22px) rotate(45deg) scale(0.6);
             height: 6px;
-            background: rgb(58, 81, 121);
+            background: #fff;
+            border-radius: 3px;
             z-index: 1;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            -o-border-radius: 3px;
       }
       .header__container.active .header__logo-burger span:nth-child(2) {
             width: 40px;
             height: 40px;
             border-radius: 20px 20px 0px 20px;
+            background: rgba(58, 81, 121, 0.00);
+            backdrop-filter: blur(22px);
+            -webkit-backdrop-filter: blur(22px);
             top: 0px;
-      }
+            -webkit-border-radius: 20px 20px 0px 20px;
+            -moz-border-radius: 20px 20px 0px 20px;
+            -ms-border-radius: 20px 20px 0px 20px;
+            -o-border-radius: 20px 20px 0px 20px;
+}
       .menu__link:hover {
-            letter-spacing: 6px;
+            letter-spacing: 4px;
+            padding-left: 10px;
       }
 }
 
@@ -220,17 +263,12 @@ input:active, :hover, :focus {
 
 
 
-.header__menu {
-}
-.menu {
-}
+
 .menu__list {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 30px;
-}
-.menu__item {
 }
 .menu__link {
       font-size: 0.7em;
@@ -258,3 +296,5 @@ input:active, :hover, :focus {
       width: 100%;
       left: 0;
 }
+
+
