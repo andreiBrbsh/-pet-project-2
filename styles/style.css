@@ -58,6 +58,7 @@ input:active, :hover, :focus {
       margin: 0 auto;
       position: relative;     
       overflow: hidden;
+      padding-bottom: 20px;
 }
 .background__wrapper {
       z-index: -1;
@@ -86,7 +87,6 @@ input:active, :hover, :focus {
 
 .header {
       margin-bottom: 30px;
-      /* + 30 mt on next section !!!!! */
 }
 .header__container {
       background: transparent;
@@ -171,6 +171,7 @@ input:active, :hover, :focus {
             top: 70px;
             left: 55px;
             overflow: hidden;
+            z-index: 100;
             transform-origin: top left;
             transform: scale(0.0);
             transition: .2s;
@@ -284,8 +285,6 @@ input:active, :hover, :focus {
       left: 0;
 }
 
-/* FEATURED --------- */
-
 .featured__title {
       font-size: 2.5em;
       line-height: 2.5rem;
@@ -367,7 +366,7 @@ input:active, :hover, :focus {
       font-size: 1.125em;
       line-height: 1.75rem;
       color: #000000;
-      margin-top: 23px;
+      margin-top: 1.4em;
       margin-bottom: 23px;
       padding: 10px;
       transition: all .2s;
@@ -375,6 +374,16 @@ input:active, :hover, :focus {
       -moz-transition: all .2s;
       -ms-transition: all .2s;
       -o-transition: all .2s;
+}
+@media (max-width: 767.98px) {
+      .featured__container {
+            font-size: 0.8em;
+      }
+      .cards-featured__text {
+            margin-top: 0em;
+            font-size: 1.2em;
+      }
+
 }
 .cards-featured__link {
       border-radius: 5px;
@@ -394,10 +403,6 @@ input:active, :hover, :focus {
       -moz-box-shadow: 0px 9px 38px -14px rgba(0,0,0,0.57);
       box-shadow: 0px 9px 38px -14px rgba(0,0,0,0.57);
 }
-
-
-
-/* READMORE ------ */
 .readmore {
       width: 100%;
 }
@@ -407,12 +412,17 @@ input:active, :hover, :focus {
       flex-direction: column;
       align-items: center;
 }
+@media (max-width: 767.98px) {
+      .readmore__container {
+            font-size: 0.8em;
+      }
+}
 .reamore__title {
       font-size: 2.5em;
       line-height: 2.5rem;
       text-align: center;
       color: #333333;
-      margin-top: 40px;
+      margin-top: 2.5rem;
 }
 .readmore__button {
       font-size: 0.6em;
@@ -431,26 +441,11 @@ input:active, :hover, :focus {
       -moz-transition: all .3s;
       -ms-transition: all .3s;
       -o-transition: all .3s;
-      margin-bottom: 60px;
+      margin-bottom: 3.75em;
 }
 .readmore__button:hover {
       background: #a887d0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-/* footer --- */
-
-
 .footer__container {
       width: 100%;
       background: #000;
@@ -496,4 +491,98 @@ input:active, :hover, :focus {
 }
 .featured__link a:hover {
       text-decoration: underline;
+}
+
+
+
+
+
+.article {
+}
+.article__container {
+}
+
+.aticle__body {
+}
+.article__image {
+      position: relative;
+}
+.image-article {
+}
+.image-article img {
+      width: 100%;
+      object-fit: cover;
+}
+.image-article__caption {
+}
+.author {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+}
+.author__body {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 1.25em;
+}
+.author__avatar {
+      margin-right: 0.875em;
+}
+.author__avatar img {
+      width: 2.5em;
+      height: 2.5em;
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+}
+.author__info {
+}
+.author__name {
+      font-size: 1.125em;
+      line-height: 1.3em;
+      color: #FFFFFF;
+}
+.author__date {
+      font-family: 'Lato';
+      font-size: 0.8em;
+      line-height: 1.3em;
+      color: #FFFFFF;
+}
+.author__review {
+      max-width: 85%;
+      font-size: 1.75em;
+      line-height: 1.5em;
+      color: #FFFFFF;
+}
+.article__content {
+      font-family: 'Lato';
+      font-size: 1.125em;
+      line-height: 1.56em;
+      color: #333333;
+      padding: 2.25em 3.75em;
+}
+.continue__reading {
+      border: none;
+      background: transparent;
+      padding: 0;
+      font-family: 'Lato';
+      font-size: 1em;
+      line-height: 1.875em;
+      color: #8D4FDB;
+}
+@media (max-width: 991.98px) {
+      .article__container {
+            font-size: 0.8em;
+      }
+      .article__content {
+            font-size: 1.5em;
+            padding: 1.25em 2.75em;
+      }
+}
+@media (max-width: 767.98px) {
+      .article__container {
+            font-size: 0.5em;
+      }
 }
