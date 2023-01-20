@@ -30,6 +30,7 @@ ol, ul, li {
 } 
 img {
       vertical-align: top;
+      border: none;
 } 
 h1, h2, h3, h4, h5, h6 {
       font-size: inherit;
@@ -513,7 +514,7 @@ input:active, :hover, :focus {
 }
 .image-article img {
       width: 100%;
-      object-fit: contain;
+      object-fit: cover;
 }
 .author {
       position: absolute;
